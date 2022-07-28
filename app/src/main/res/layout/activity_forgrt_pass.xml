@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/text_margin"
+    android:background="@color/myBg"
+    android:orientation="vertical"
+    tools:context=".ForgrtPassActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/myBg"
+        android:padding="@dimen/text_margin">
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/password_logo"
+            android:layout_width="0dp"
+            android:layout_height="250dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/password" />
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:padding="@dimen/text_margin"
+            app:cardCornerRadius="26dp"
+            app:cardElevation="4dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password_logo">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/myBg"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/text_margin"
+                    android:layout_marginBottom="@dimen/text_margin"
+                    android:text="@string/forget_password"
+                    android:textColor="@color/myTextColor"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/forget_Input_Layout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/email"
+                    android:padding="10dp"
+                    android:textColorHint="@color/myTextColor"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/myTextColor"
+                    app:errorEnabled="true"
+                    app:errorIconDrawable="@drawable/ic_error"
+                    app:helperText="@string/required"
+                    app:helperTextEnabled="true"
+                    app:helperTextTextColor="@color/myTextColor"
+                    app:startIconDrawable="@drawable/ic_email"
+                    app:startIconTint="@color/myTextColor">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_btn"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/myTextColor" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <Button
+                    android:id="@+id/already_have_account"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_margin="5dp"
+                    android:background="#00000000"
+                    android:elevation="0dp"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/already_have_an_account"
+                    android:textColor="@color/myTextColor"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <Button
+            android:id="@+id/forgetpassbtn"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/text_margin"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/background_btn"
+            android:elevation="5dp"
+            android:text="@string/forget_password1"
+            android:textColor="#fff"
+            app:backgroundTint="@android:color/transparent"
+            app:backgroundTintMode="add"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/materialCardView" />
+
+        <Button
+            android:id="@+id/signup_reference"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="#00000000"
+            android:elevation="0dp"
+            android:text="@string/new_user_sign_up"
+            android:textColor="@color/myTextColor"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/forgetpassbtn" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

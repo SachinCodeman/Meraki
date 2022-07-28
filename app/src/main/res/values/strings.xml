@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Meraki</string>
+    <string name="new_user_sign_up">New user?sign up</string>
+    <string name="all_rights_are_reserved">All Rights are Reserved</string>
+    <string name="free_higher_education">Free higher education</string>
+    <string name="navgurukul">NavGurukul</string>
+    <string name="forget_password">Forget Password ?</string>
+    <string name="login">Login</string>
+    <string name="welcome">Welcome</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="required">Required*</string>
+    <string name="registeration">Registeration</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="register">Register</string>
+    <string name="already_have_an_account">Already have an account ?</string>
+    <string name="username">Username</string>
+    <string name="forget_password1">Forget Password</string>
+    <string name="logout">logout</string>
+</resources>

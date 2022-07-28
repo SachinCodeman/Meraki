@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/myBg"
+    tools:context=".SignUpActivity">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/myBg">
+
+        <TextView
+            android:id="@+id/welcome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-medium"
+            android:text="@string/registeration"
+            android:textColor="@color/myTextColor"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/registration"
+            android:layout_width="300dp"
+            android:layout_height="200dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/welcome"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/registration" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/materialCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:padding="@dimen/text_margin"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="4dp"
+            app:layout_constraintBottom_toTopOf="@+id/registerBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/registration">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/myBg"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/text_margin"
+                    android:layout_marginBottom="@dimen/text_margin"
+                    android:text="@string/sign_up"
+                    android:textColor="@color/myTextColor"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="2dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/background_btn"
+
+                    />
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/signupTlUsername"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/username"
+                    android:padding="10dp"
+                    android:textColorHint="@color/myTextColor"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="15"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/myTextColor"
+                    app:errorEnabled="true"
+                    app:errorIconDrawable="@drawable/ic_error"
+                    app:helperText="@string/required"
+                    app:helperTextEnabled="true"
+                    app:helperTextTextColor="@color/myTextColor"
+                    app:startIconDrawable="@drawable/ic_person"
+                    app:startIconTint="@color/myTextColor">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/signupUsername"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_btn"
+                        android:inputType="text"
+                        android:maxLength="20"
+                        android:textColor="@color/myTextColor" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/signupTlEmail"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="@string/email"
+                    android:padding="10dp"
+                    android:textColorHint="@color/myTextColor"
+                    app:endIconMode="clear_text"
+                    app:endIconTint="@color/myTextColor"
+                    app:errorEnabled="true"
+                    app:errorIconDrawable="@drawable/ic_error"
+                    app:helperText="@string/required"
+                    app:helperTextEnabled="true"
+                    app:helperTextTextColor="@color/myTextColor"
+                    app:startIconDrawable="@drawable/ic_email"
+                    app:startIconTint="@color/myTextColor">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/signupEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_btn"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/myTextColor" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/signupTlPassword"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:hint="@string/password"
+                    android:textColorHint="@color/myTextColor"
+                    app:counterEnabled="true"
+                    app:counterMaxLength="8"
+                    app:errorEnabled="true"
+                    app:errorIconDrawable="@drawable/ic_error"
+                    app:helperText="Required*"
+                    app:helperTextEnabled="true"
+                    app:helperTextTextColor="@color/myTextColor"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/black"
+                    app:startIconDrawable="@drawable/ic_lock"
+                    app:startIconTint="@color/myTextColor"
+
+                    >
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/signupPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/rounded_btn"
+                        android:inputType="textPassword"
+                        android:maxLength="10"
+                        android:textColor="@color/myTextColor" />
+
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/loginReference"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_margin="5dp"
+                    android:background="#00000000"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="@string/already_have_an_account"
+                    android:textColor="@color/myTextColor"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <Button
+            android:id="@+id/registerBtn"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/text_size01"
+            android:background="@drawable/background_btn"
+            android:text="@string/register"
+            android:textColor="#fff"
+            app:backgroundTint="@android:color/transparent"
+            app:backgroundTintMode="add"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
